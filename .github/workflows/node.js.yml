@@ -22,8 +22,9 @@ jobs:
         npm i
         npm run build
         cd ..
-        pm2 start ecosystem.config.js
+        pm2 stop ecosystem.config.js
         pm2 start ecosystem.config.js
         pm2 save
         sudo service nginx restart
 
+        
