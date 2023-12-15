@@ -21,9 +21,18 @@ jobs:
         cd frontend
         npm i
         npm run build
-  deploy:
+  test:
     runs-on: self-hosted
     needs: build
+
+    steps:
+    - name: Test to Production
+      run: |
+        # Add your test commands here
+        echo "Test in Progress"
+  deploy:
+    runs-on: self-hosted
+    needs: test
     steps:
     - name: Deploy to Production
       run: |
