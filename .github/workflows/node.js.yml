@@ -32,7 +32,7 @@ jobs:
         echo "Test in Progress"
   deploy:
     runs-on: self-hosted
-    needs: build
+    needs: test
     steps:
     - name: Deploy to Production
       run: |
